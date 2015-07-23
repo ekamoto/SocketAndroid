@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">socketAndroid</string>
+    <string name="host_port_hint">45.55.64.144:8099</string>
+    <string name="host_port_label">Porta:</string>
+    <string name="btn_send">Enviar</string>
+</resources>

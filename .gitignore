@@ -1,0 +1,11 @@
+.idea/
+ant.properties
+build.xml
+gen/
+local.properties
+out/
+proguard-project.txt
+project.properties
+socketAndroid.iml
+
+
