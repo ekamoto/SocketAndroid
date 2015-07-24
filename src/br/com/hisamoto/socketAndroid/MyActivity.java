@@ -19,7 +19,7 @@ public class MyActivity extends Activity {
     private TextView txtStatus;
     private TextView txtValor;
     private TextView txtHostPort;
-    private SocketTask st;
+    private static SocketTask st;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,8 @@ public class MyActivity extends Activity {
     protected void onDestroy() {
 
         super.onDestroy();
-        st = null;
+        // st.cancel(true);
+        // st = null;
 //        st.cancel(true);
     }
 }
