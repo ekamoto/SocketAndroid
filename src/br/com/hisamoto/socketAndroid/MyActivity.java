@@ -75,6 +75,7 @@ public class MyActivity extends Activity {
     protected void onDestroy() {
 
         super.onDestroy();
-        st.cancel(true);
+        st = null;
+//        st.cancel(true);
     }
 }

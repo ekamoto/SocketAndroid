@@ -49,6 +49,9 @@ public class SocketTask extends AsyncTask<String, String, Boolean> {
         if (socket != null && socket.isConnected()) {
 
             os.write(data.getBytes());
+        } else {
+
+            Log.e("SocketAndroid", "Socket fechado");
         }
     }
 
@@ -65,7 +68,7 @@ public class SocketTask extends AsyncTask<String, String, Boolean> {
     public void reconectar() {
 
         SocketAddress sockaddr = new InetSocketAddress(host, port);
-        socket = new Socket();
+        //socket = new Socket();
         try {
             socket.connect(sockaddr, timeout); // milisegundos
         } catch (IOException e) {
@@ -120,7 +123,7 @@ public class SocketTask extends AsyncTask<String, String, Boolean> {
             Log.e("SocketAndroid", "Erro generico", e);
             result = true;
         } finally {
-
+/*
             try {
                 if (is != null) {
                     is.close();
@@ -134,6 +137,7 @@ public class SocketTask extends AsyncTask<String, String, Boolean> {
             } catch (Exception e) {
                 Log.e("SocketAndroid", "Erro ao fechar conexao", e);
             }
+            */
         }
         return result;
     }
