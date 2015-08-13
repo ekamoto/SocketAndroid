@@ -1,15 +1,15 @@
 package br.com.hisamoto.socketAndroid;
 
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import br.com.hisamoto.socketAndroid.location.MyLocation;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,6 +20,7 @@ public class MyActivity extends Activity {
     private TextView txtValor;
     private TextView txtHostPort;
     private static SocketTask st;
+    private static MyLocation myLocation = new MyLocation();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,9 @@ public class MyActivity extends Activity {
         txtStatus = (TextView) findViewById(R.id.txtStatus);
         txtValor = (TextView) findViewById(R.id.txtValor);
         txtHostPort = (TextView) findViewById(R.id.txtHostPort);
-
         btnSend.setOnClickListener(btnConnectListener);
+
+        myLocation.getLocation(getApplicationContext(), locationResult);
     }
 
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
@@ -56,7 +58,9 @@ public class MyActivity extends Activity {
                         txtStatus.setText(sdf.format(new Date()) + " - " + progress[0]);
                     }
                 };
-                st.execute(data); // Envia os dado
+
+                // Envia os dado
+                st.execute(data);
             } else {
 
                 try {
@@ -71,12 +75,19 @@ public class MyActivity extends Activity {
         }
     };
 
+    MyLocation.LocationResult locationResult = new MyLocation.LocationResult() {
+
+        @Override
+        public void gotLocation(Location location) {
+
+            Log.i("SockeLeandro", "" + location);
+            LogMap.getInstance().writeToLog("" + location.getLatitude()+" | "+location.getLongitude()+"\n");
+        }
+    };
+
     @Override
     protected void onDestroy() {
 
         super.onDestroy();
-        // st.cancel(true);
-        // st = null;
-//        st.cancel(true);
     }
 }
