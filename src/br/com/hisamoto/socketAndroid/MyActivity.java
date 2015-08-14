@@ -1,8 +1,10 @@
 package br.com.hisamoto.socketAndroid;
 
 import android.app.Activity;
+import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +36,28 @@ public class MyActivity extends Activity {
         btnSend.setOnClickListener(btnConnectListener);
 
         myLocation.getLocation(getApplicationContext(), locationResult);
+    }
+
+    // CAPTURANDO NÚMERO DE SÉRIE DO CELULAR:
+
+    public String getIMEI(){
+        String IMEI = "";
+
+        TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        IMEI = telephonyManager.getDeviceId();
+
+        return IMEI;
+    }
+
+// CAPTURANDO NÚMERO DE SÉRIE DO CARTÃO SIM:
+
+    public String numCard(){
+        String IMSI = "";
+
+        TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        IMSI = telephonyManager.getSimSerialNumber();
+
+        return IMSI;
     }
 
     private View.OnClickListener btnConnectListener = new View.OnClickListener() {
@@ -80,8 +104,10 @@ public class MyActivity extends Activity {
         @Override
         public void gotLocation(Location location) {
 
-            Log.i("SockeLeandro", "" + location);
-            LogMap.getInstance().writeToLog("" + location.getLatitude()+" | "+location.getLongitude()+"\n");
+            String text = "C;" + getIMEI() + ";" + Double.toString(location.getLatitude()) + ";" + Double.toString(location.getLongitude()) + ";" + Long.toString(location.getTime()) + ";gps";
+
+            Log.i("SockeLeandro", "" + text);
+            LogMap.getInstance().writeToLog(text + "\n");
         }
     };
 
