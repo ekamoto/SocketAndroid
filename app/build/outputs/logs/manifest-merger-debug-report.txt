@@ -1,0 +1,90 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:2:1-30:12
+	xmlns:android
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:3:11-50
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:5:11-36
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:4:11-34
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:6:5-43
+	android:targetSdkVersion
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:6:15-41
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:9:5-96
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:13:5-74
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:13:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:15:22-78
+uses-permission#android.permission.WRITE_OWNER_DATA
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:16:5-75
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:16:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:17:22-77
+uses-permission#android.permission.READ_OWNER_DATA
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:18:5-74
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:18:22-71
+application
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:20:5-29:19
+	android:label
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:20:18-50
+	android:icon
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:20:51-87
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:20:88-129
+activity#br.com.hisamoto.socketAndroid.MyActivity
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:21:9-28:20
+	android:noHistory
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:23:53-77
+	android:label
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:22:19-51
+	android:excludeFromRecents
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:23:19-52
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:21:19-44
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:25:17-68
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:26:17-76
+	android:name
+		ADDED from /home/hisamoto/AndroidStudioProjects/socket1/app/src/main/AndroidManifest.xml:26:27-74
